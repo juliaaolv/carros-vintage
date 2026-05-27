@@ -1,0 +1,14 @@
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 55px;
+}
+
+.logo h2{
+    font-size: 28px;
+    color: gold;
+}
