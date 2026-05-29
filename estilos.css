@@ -43,3 +43,61 @@ body, html {
     letter-spacing: 4px;
     font-weight: 900;
 }
+
+.conteudo-principal {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40px; 
+}
+
+.titulo-principal {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.descricao {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.botao-ronco {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-ronco:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05); 
+}
+
+.rodape {
+    height: 35px; 
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    .descricao {
+        font-size: 0.95rem;
+    }
+}
