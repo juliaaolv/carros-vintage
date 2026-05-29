@@ -1,14 +1,45 @@
-.logo{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif; 
+    background-color: #000;
+}
+
+.capa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/ford-maverick-gt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 40px 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-.logo img{
-    width: 55px;
+.logo-img {
+    height: 35px; 
+    width: auto;
 }
 
-.logo h2{
-    font-size: 28px;
-    color: gold;
+.logo-texto {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    font-weight: 900;
 }
