@@ -125,3 +125,18 @@ body, html {
     position: relative;
     transition: 0.3s;
 }
+
+.menu-principal a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.menu-principal a:hover::after {
+    width: 100%;
+}
