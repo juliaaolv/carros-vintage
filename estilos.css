@@ -11,6 +11,7 @@ body, html {
     background-color: #000;
 }
 
+/*CSS da pagina inicial*/
 .capa {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/ford-maverick-gt.jpg');
     background-size: cover;
@@ -154,7 +155,7 @@ body, html {
   box-sizing: border-box; 
 }
 
-/*CSS do background de créditos*/
+/*CSS página de créditos*/
 
 .capa-creditos {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/alfa-romeo-alfetta.jpg');
@@ -170,4 +171,33 @@ body, html {
     padding: 40px 20px;
     color: #ffffff;
     text-align: center;
+}
+
+.titulos-creditos{
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.links-dos-creditos{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+.links-dos-creditos a:link{
+    color: gold;
+    text-decoration: none;
+}
+.links-dos-creditos a:visited{
+    color: goldenrod;
+    text-decoration: underline;
+}
+.links-dos-creditos a:hover{
+    color: gold;
+    text-decoration: underline;
 }
