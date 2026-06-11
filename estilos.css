@@ -9,6 +9,17 @@ body, html {
     height: 100%;
     font-family: 'Inter', sans-serif; 
     background-color: #ece7e7;
+    animation: 1s ease-out reverse entrar;
+}
+
+@keyframes entrar {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(180);
+    }
 }
 
 /*CSS da pagina inicial*/
