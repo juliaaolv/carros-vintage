@@ -524,3 +524,39 @@ body, html {
     color: #cccccc;
     line-height: 1.6;
 }
+
+   /*RESPONSIVIDADE DA PÁGINA DE MODELOS*/
+
+@media (max-width: 768px) {
+    .modelos {
+        padding-top: 160px; 
+    }
+    
+    .introducao h1 {
+        font-size: 2rem;
+    }
+    
+    .comparacao {
+        padding: 15px;
+    }
+    
+    .comparacao th, .comparacao td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .glossario dl {
+        display: block; 
+    }
+    .glossario dt {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        border-left: 3px solid #ffffff;
+        padding-left: 8px;
+    }
+    .glossario dd {
+        margin-bottom: 15px;
+    }
+}
