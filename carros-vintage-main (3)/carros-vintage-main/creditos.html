@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos</title>
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById('menuToggle');
+        const esquerda = document.getElementById('menuEsquerda');
+        const direita = document.getElementById('menuDireita');
+
+        btn.addEventListener('click', () => {
+          esquerda.classList.toggle('aberto');
+          direita.classList.toggle('aberto');
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div class="capa-creditos">
+      
+      <nav class="menu-principal">
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <div class="menu-esquerda" id="menuEsquerda">
+          <a href="index.html">Início</a>
+          <a href="modelos.html">Modelos</a>
+        </div>
+
+        <div class="logo">
+          <img src="imagens/favicon.png" alt="Logo CV" class="logo-img" />
+          <h2 class="logo-texto">CARROS VINTAGE</h2>
+        </div>
+
+        <div class="menu-direita" id="menuDireita">
+          <a href="lendas.html">Lendas do Cinema</a>
+          <a href="creditos.html">Créditos</a>
+        </div>
+      </nav>
+
+      <main class="conteudo-principal">
+        <h1 class="titulo-principal">Créditos do Projeto</h1>
+
+        <section>
+          <h2 class="titulos-creditos">Desenvolvimento e Colaboradores:</h2>
+          <p class="links-dos-creditos">
+            <strong>Colaboradores:</strong> Julia Oliveira, Matheus Henrique, Lucas Caeiro e Miguel Nogueira.
+          </p>
+          <p class="links-dos-creditos">
+            <strong>Professor Orientador:</strong> William Sallum.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="titulos-creditos">Links de Terceiros e Imagens Utilizadas:</h2>
+          
+          <p class="links-dos-creditos">
+            <strong>Chevrolet Opala SS:</strong> Foto por <a href="https://thegarage.com.br/carro/chevrolet-opala-ss/" target="_blank">The Garage</a>
+          </p>
+
+          <p class="links-dos-creditos">
+            <strong>Ford Maverick GT:</strong> Foto por <a href="https://thegarage.com.br/carro/1975-ford-maverick-v8-gt/" target="_blank">The Garage</a>
+          </p>
+
+          <p class="links-dos-creditos">
+            <strong>Dodge Charger R/T:</strong> Foto por <a href="https://thegarage.com.br/carro/1975-dodge-charger-rt-2/" target="_blank">The Garage</a> 
+          </p>
+
+          <p class="links-dos-creditos">
+            <strong>Ford Mustang Mach 1:</strong> Foto por <a href="https://thegarage.com.br/carro/1970-ford-mustang-mach-1/#jp-carousel-14477" target="_blank">The Garage</a> 
+          </p>
+
+          <p class="links-dos-creditos">
+            <strong>Referências Técnicas:</strong> Conteúdo técnico adaptado do portal <a href="https://seniormotors.com.br/carros-antigos-de-1970/" target="_blank">Senior Motors</a>.
+          </p>
+        </section>
+      </main>
+
+      <footer class="rodape">
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin: 0;">2026 - Projeto sobre carros dos anos 1970</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>

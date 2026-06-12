@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif; 
+    background-color: #121212;
+    animation: 1s ease-out reverse entrar;
+}
+
+@keyframes entrar {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(180);
+    }
+}
+
+/*CSS da pagina inicial*/
+.capa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/ford-maverick-gt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 40px 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 90px; 
+    width: auto;
+}
+
+.logo-texto {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.conteudo-principal {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+.titulo-principal {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.descricao {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.botao-ronco {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-ronco:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05); 
+}
+
+.rodape {
+    height: 35px; 
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    .descricao {
+        font-size: 0.95rem;
+    }
+}
+
+.menu-principal {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-esquerda, .menu-direita {
+    display: flex;
+    gap: 35px;
+}
+
+@media (max-width: 768px) {
+    .menu-principal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+        padding: 12px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-esquerda,
+    .menu-direita {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .menu-esquerda.aberto,
+    .menu-direita.aberto {
+        display: flex;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        order: -1;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .logo-texto {
+        font-size: 1.1rem;
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    .descricao {
+        font-size: 0.95rem;
+    }
+}
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-esquerda,
+    .menu-direita {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .menu-esquerda.aberto,
+    .menu-direita.aberto {
+        display: flex;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        order: -1; 
+    }
+
+    .logo-img {
+        height: 60px; 
+    }
+
+    .logo-texto {
+        font-size: 1.1rem;
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    .descricao {
+        font-size: 0.95rem;
+    }
+
+
+.menu-esquerda,.menu-direita {
+    display: flex;
+    gap: 35px;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu-principal a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.menu-principal a:hover::after {
+    width: 100%;
+}
+
+
+.menu-principal {
+  position:relative;
+  top:0;
+  left: 10;
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px;
+  z-index: 1000;
+  box-sizing: border-box; 
+}
+
+/*CSS página de créditos*/
+
+.capa-creditos {
+    background: radial-gradient(
+    circle at left bottom, 
+    rgba(255, 255, 255, 0.25) 0%, 
+    rgba(40, 40, 40, 0.6) 30%, 
+    rgba(15, 15, 15, 1) 70%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 40px 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.titulos-creditos{
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.links-dos-creditos{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+.links-dos-creditos a:link{
+    color: gold;
+    text-decoration: none;
+}
+.links-dos-creditos a:visited{
+    color: goldenrod;
+    text-decoration: underline;
+}
+.links-dos-creditos a:hover{
+    color: gold;
+    text-decoration: underline;
+}
+
+/*CSS página de Modelos*/
+
+.modelos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 60px 20px; 
+    font-family: 'Inter', sans-serif;
+    color: #d3cccc;
+}
+
+
+.introducao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.introducao h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.introducao p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/*Critério: Flexbox/Grid + Responsividade  */
+.cards-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%); 
+    transition: filter 0.3s ease;
+}
+
+.card:hover img {
+    filter: grayscale(0%); 
+}
+
+.card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 20px 20px 10px 20px;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #dddddd;
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+}
+
+.card p strong {
+    color: #ffffff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+}
+
+.comparacao {
+    margin-bottom: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 35px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto; 
+}
+
+.comparacao h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Tabela (Critério obrigatório) exigido pelo sallum */
+.comparacao table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.comparacao th, .comparacao td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+}
+
+.comparacao th[colspan="4"] {
+    background-color: #ffffff; 
+    color: #000000;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.comparacao tr:nth-child(2) th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Critério: Pseudo-classes */
+.comparacao tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.comparacao tr:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.glossario {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.glossario h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 8px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.glossario dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px 40px;
+}
+
+.glossario dt {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: #ffffff; 
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.glossario dd {
+    margin-left: 0;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+   /*RESPONSIVIDADE DA PÁGINA DE MODELOS*/
+
+@media (max-width: 768px) {
+    .modelos {
+        padding-top: 160px; 
+    }
+    
+    .introducao h1 {
+        font-size: 2rem;
+    }
+    
+    .comparacao {
+        padding: 15px;
+    }
+    
+    .comparacao th, .comparacao td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .glossario dl {
+        display: block; 
+    }
+    .glossario dt {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        border-left: 3px solid #ffffff;
+        padding-left: 8px;
+    }
+    .glossario dd {
+        margin-bottom: 15px;
+    }
+}
