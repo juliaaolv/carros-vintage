@@ -503,3 +503,24 @@ body, html {
     display: inline-block;
     letter-spacing: 1px;
 }
+
+.glossario dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px 40px;
+}
+
+.glossario dt {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: #ffffff; 
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.glossario dd {
+    margin-left: 0;
+    color: #cccccc;
+    line-height: 1.6;
+}
