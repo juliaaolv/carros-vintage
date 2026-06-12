@@ -485,3 +485,21 @@ body, html {
 .comparacao tr:hover {
     background-color: rgba(255, 255, 255, 0.07);
 }
+
+.glossario {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.glossario h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 8px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
