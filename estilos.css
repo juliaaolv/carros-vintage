@@ -4,11 +4,10 @@
     box-sizing: border-box;
 }
 
-
 body, html {
     height: 100%;
     font-family: 'Inter', sans-serif; 
-    background-color: #ece7e7;
+    background-color: #121212;
     animation: 1s ease-out reverse entrar;
 }
 
@@ -55,6 +54,7 @@ body, html {
     font-size: 1.4rem;
     letter-spacing: 4px;
     font-weight: 900;
+    color: #ffffff;
 }
 
 .conteudo-principal {
@@ -211,21 +211,19 @@ body, html {
         padding: 15px 0;
     }
 
-    /* classe adicionada pelo JS quando o menu abre */
     .menu-esquerda.aberto,
     .menu-direita.aberto {
         display: flex;
     }
 
     .logo {
-        /* a logo ocupa a linha toda e fica centralizada */
         width: 100%;
         justify-content: center;
-        order: -1; /* garante que a logo fique no topo */
+        order: -1; 
     }
 
     .logo-img {
-        height: 60px; /* menor no celular */
+        height: 60px; 
     }
 
     .logo-texto {
@@ -334,4 +332,38 @@ body, html {
 .links-dos-creditos a:hover{
     color: gold;
     text-decoration: underline;
+}
+
+/*CSS página de Modelos*/
+
+.modelos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 60px 20px; 
+    font-family: 'Inter', sans-serif;
+    color: #d3cccc;
+}
+
+
+.introducao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.introducao h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.introducao p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
