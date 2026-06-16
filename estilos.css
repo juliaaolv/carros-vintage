@@ -4,11 +4,21 @@
     box-sizing: border-box;
 }
 
-
 body, html {
     height: 100%;
     font-family: 'Inter', sans-serif; 
-    background-color: #000;
+    background-color: #121212;
+    animation: 1s ease-out reverse entrar;
+}
+
+@keyframes entrar {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(180);
+    }
 }
 
 /*CSS da pagina inicial*/
@@ -44,6 +54,7 @@ body, html {
     font-size: 1.4rem;
     letter-spacing: 4px;
     font-weight: 900;
+    color: #ffffff;
 }
 
 .conteudo-principal {
@@ -208,11 +219,11 @@ body, html {
     .logo {
         width: 100%;
         justify-content: center;
-        order: -1;
+        order: -1; 
     }
 
     .logo-img {
-        height: 60px;
+        height: 60px; 
     }
 
     .logo-texto {
@@ -274,20 +285,25 @@ body, html {
 /*CSS página de créditos*/
 
 .capa-creditos {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/alfa-romeo-alfetta.jpg');
+    background: radial-gradient(
+    circle at left bottom, 
+    rgba(255, 255, 255, 0.25) 0%, 
+    rgba(40, 40, 40, 0.6) 30%, 
+    rgba(15, 15, 15, 1) 70%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    padding: 40px 20px;
+    padding: 0 20px 40px 20px;
     color: #ffffff;
     text-align: center;
 }
+
 
 .titulos-creditos{
     font-family: 'Orbitron', sans-serif; 
@@ -317,123 +333,230 @@ body, html {
     color: gold;
     text-decoration: underline;
 }
-.nomemodelo {
-    color: rgba(0, 0, 0, 0.9);
-    font-family: 'Gotham';
-    background-color: rgb(57, 55, 55);
-    display: inline-block;
-    padding: 20px;
-    border-radius: 40px;
-    margin: 3%;
-}
-.divis { 
-    color: grey;
-}
-.modeldes {
-    color: white;
-    font-size: 27px;
-    padding-left: 4%;
-}
-.nomemodelo, .modeldes {
-    margin-left: 5%;
-    margin-right: 5%;
+
+/*CSS página de Modelos*/
+
+.modelos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 60px 20px; 
+    font-family: 'Inter', sans-serif;
+    color: #d3cccc;
 }
 
-.nomemodelo {
+
+.introducao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.introducao h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.introducao p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/*Critério: Flexbox/Grid + Responsividade  */
+.cards-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%); 
+    transition: filter 0.3s ease;
+}
+
+.card:hover img {
+    filter: grayscale(0%); 
+}
+
+.card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 20px 20px 10px 20px;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #dddddd;
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+}
+
+.card p strong {
+    color: #ffffff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+}
+
+.comparacao {
+    margin-bottom: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 35px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto; 
+}
+
+.comparacao h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
-    font-weight: 700;
-    color: #ff5722;
-    background-color: #121212;
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 6px;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-left: 5px solid #ff5722;
-}
-
-.modeldes {
-    font-family: 'Inter', sans-serif;
-    color: #e0e0e0;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin-bottom: 50px;
-}
-
-.divis {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #ffffff;
     text-align: center;
-    margin: 60px 0 30px 0;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    border-bottom: 2px dashed #333333;
-    padding-bottom: 20px;
-    animation: coresBrasil 6s infinite ease-in-out;
+    letter-spacing: 1px;
 }
 
-@keyframes coresBrasil {
-    0%, 100% {
-        color: #009c3b;
-        text-shadow: 0 0 10px rgba(0, 156, 59, 0.2);
-    }
-    33% {
-        color: #ffdf00;
-        text-shadow: 0 0 10px rgba(255, 223, 0, 0.2);
-    }
-    66% {
-        color: #002776;
-        text-shadow: 0 0 10px rgba(0, 39, 118, 0.4);
-    }
-}
-
-@media (max-width: 768px) {
-    .nomemodelo {
-        font-size: 1.4rem;
-        padding: 10px 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .modeldes {
-        font-size: 1rem;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-.img-modelo {
-    display: block;
-    
-    /* Força todas as imagens a terem exatamente o mesmo tamanho na tela */
+/* Tabela (Critério obrigatório) exigido pelo sallum */
+.comparacao table {
     width: 100%;
-    max-width: 500px; /* Largura ideal baseada na foto do Pantera */
-    height: auto; /* Mantém a proporção correta para não distorcer o carro */
-    
-    /* Força o alinhamento perfeitamente centralizado na página */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    
-    /* Acabamento visual idêntico */
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Efeito de zoom ao passar o mouse */
-.img-modelo:hover {
-    transform: scale(1.03);
+.comparacao th, .comparacao td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
 }
 
-/* Ajuste para telas de celular */
+.comparacao th[colspan="4"] {
+    background-color: #ffffff; 
+    color: #000000;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.comparacao tr:nth-child(2) th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Critério: Pseudo-classes */
+.comparacao tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.comparacao tr:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.glossario {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.glossario h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 8px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.glossario dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px 40px;
+}
+
+.glossario dt {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: #ffffff; 
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.glossario dd {
+    margin-left: 0;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+   /*RESPONSIVIDADE DA PÁGINA DE MODELOS*/
+
 @media (max-width: 768px) {
-    .img-modelo {
-        max-width: 85vw; /* Ocupa a largura da tela do celular sem passar das bordas */
+    .modelos {
+        padding-top: 160px; 
+    }
+    
+    .introducao h1 {
+        font-size: 2rem;
+    }
+    
+    .comparacao {
+        padding: 15px;
+    }
+    
+    .comparacao th, .comparacao td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .glossario dl {
+        display: block; 
+    }
+    .glossario dt {
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
+        border-left: 3px solid #ffffff;
+        padding-left: 8px;
+    }
+    .glossario dd {
+        margin-bottom: 15px;
     }
 }
