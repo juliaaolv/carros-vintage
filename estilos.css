@@ -451,7 +451,15 @@ body, html {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.comparacao th, .comparacao td {
+.comparacao th{
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+}
+
+
+.comparacao td {
     padding: 16px 20px;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -560,3 +568,31 @@ body, html {
         margin-bottom: 15px;
     }
 }
+
+/* Página Lendas */
+
+.lendas {
+    max-width: 1200px;
+    margin: auto;
+    padding: 140px 20px 60px;
+}
+
+.introducao-lendas {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.introducao-lendas h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.introducao-lendas p {
+    max-width: 700px;
+    margin: auto;
+    color: #d0d0d0;
+    line-height: 1.7;
+}
+
