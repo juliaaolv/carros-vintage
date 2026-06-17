@@ -628,3 +628,21 @@ body, html {
     letter-spacing: 2px;
     text-shadow: 0 0 8px rgba(255,255,255,0.3);
 }
+
+.easter-box img {
+    width: 260px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.easter-box p {
+    color: #ffae00;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.pista-secreta:hover + .easter-box {
+    opacity: 1;
+    transform: scale(1);
+}
