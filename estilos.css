@@ -596,3 +596,19 @@ body, html {
     line-height: 1.7;
 }
 
+
+/*(CRITÉRIO: easter egg ) NÃO APAGUEMMMMMMM, DEU TRABALHO*/
+.pista-secreta {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 0.9rem;
+    margin: 40px 0;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.pista-secreta:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    cursor: pointer;
+}
