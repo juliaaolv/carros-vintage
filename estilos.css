@@ -25,13 +25,10 @@ footer {
     padding: 25px 0;
     text-align: center;
     
-    /* Remove o fundo escuro para revelar o que está atrás */
     background-color: transparent; 
     
-    /* Faz o rodapé subir para cima do fundo do container anterior */
     margin-top: -70px; 
     
-    /* Garante que ele fique na camada de cima e seja visível */
     position: relative; 
     z-index: 10; 
 }
@@ -580,36 +577,7 @@ footer {
     }
 }
 
-/* Página Lendas */
-
-.lendas {
-    max-width: 1200px;
-    margin: auto;
-    /* Adicionamos padding-bottom de 120px aqui também */
-    padding: 140px 20px 120px; 
-}
-
-.introducao-lendas {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.introducao-lendas h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.introducao-lendas p {
-    max-width: 700px;
-    margin: auto;
-    color: #d0d0d0;
-    line-height: 1.7;
-}
-
-
-/*(CRITÉRIO: easter egg ) NÃO APAGUEMMMMMMM, DEU TRABALHO*/
+/*(CRITÉRIO: easter egg ) NÃO APAGUEMMMMMMM, DEU TRABALHO está na (pagina de modelos)*/
 .pista-secreta {
     text-align: center;
     color: rgba(255, 255, 255, 0.25);
@@ -657,4 +625,31 @@ footer {
 .pista-secreta:hover + .easter-box {
     opacity: 1;
     transform: scale(1);
+}
+
+/* Página Lendas */
+
+.lendas {
+    max-width: 1200px;
+    margin: auto;
+    padding: 140px 20px 120px; 
+}
+
+.introducao-lendas {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.introducao-lendas h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.introducao-lendas p {
+    max-width: 700px;
+    margin: auto;
+    color: #d0d0d0;
+    line-height: 1.7;
 }
