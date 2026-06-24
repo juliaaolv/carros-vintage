@@ -20,7 +20,7 @@ body, html {
 main, .capa, .capa-creditos {
     flex: 1 0 auto;
 }
-.rodape {
+footer {
     width: 100%;
     padding: 25px 0;
     text-align: center;
@@ -126,7 +126,7 @@ main, .capa, .capa-creditos {
     transform: scale(1.05); 
 }
 
-.rodape {
+footer {
     width: 100%;
     padding: 40px 0;
     text-align: center;
@@ -155,19 +155,6 @@ main, .capa, .capa-creditos {
     justify-content: center;
     align-items: center;
     gap: 50px;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .menu-esquerda, .menu-direita {
@@ -224,11 +211,6 @@ main, .capa, .capa-creditos {
         font-size: 0.95rem;
     }
 }
-
-    .menu-toggle {
-        display: block;
-    }
-
     .menu-esquerda,
     .menu-direita {
         display: none;

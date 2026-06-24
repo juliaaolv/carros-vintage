@@ -9,26 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById('menuToggle');
-        const esquerda = document.getElementById('menuEsquerda');
-        const direita = document.getElementById('menuDireita');
-
-        btn.addEventListener('click', () => {
-          esquerda.classList.toggle('aberto');
-          direita.classList.toggle('aberto');
-        });
-      });
-    </script>
   </head>
   <body>
 
     <div class="capa-creditos">
       
       <nav class="menu-principal">
-        <button class="menu-toggle" id="menuToggle">&#9776;</button>
         <div class="menu-esquerda" id="menuEsquerda">
           <a href="index.html">Início</a>
           <a href="modelos.html">Modelos</a>
@@ -88,7 +74,7 @@
       </main>
       </div>
 
-      <footer class="rodape">
+      <footer>
         <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">2026 - Projeto sobre carros dos anos 1970</p>
       </footer>
 
