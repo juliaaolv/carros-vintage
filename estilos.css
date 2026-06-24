@@ -653,3 +653,25 @@ footer {
     color: #d0d0d0;
     line-height: 1.7;
 }
+
+.conteiner-lendas-alternadas {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    margin-bottom: 80px;
+}
+
+.linha-lenda {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 40px;
+    transition: border-color 0.3s ease;
+}
+
+.linha-lenda:hover {
+    border-color: rgba(255, 174, 0, 0.3); 
+}
