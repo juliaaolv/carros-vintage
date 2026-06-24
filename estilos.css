@@ -699,3 +699,19 @@ footer {
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
+
+.filme-tag {
+    font-size: 1rem;
+    color: #ffae00; 
+    margin-bottom: 15px;
+}
+
+.biografia {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+.linha-lenda:nth-child(even) {
+    flex-direction: row-reverse;
+}
