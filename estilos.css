@@ -5,10 +5,35 @@
 }
 
 body, html {
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Inter', sans-serif; 
     background-color: #121212;
     animation: 1s ease-out reverse entrar;
+}
+
+.capa, .capa-creditos {
+    min-height: calc(100vh - 115px); 
+}
+
+main, .capa, .capa-creditos {
+    flex: 1 0 auto;
+}
+.rodape {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    
+    /* Remove o fundo escuro para revelar o que está atrás */
+    background-color: transparent; 
+    
+    /* Faz o rodapé subir para cima do fundo do container anterior */
+    margin-top: -70px; 
+    
+    /* Garante que ele fique na camada de cima e seja visível */
+    position: relative; 
+    z-index: 10; 
 }
 
 @keyframes entrar {
@@ -17,6 +42,7 @@ body, html {
     }
     100%{
         opacity: 0;
+        transform: translateX(180);
     }
 }
 
@@ -100,8 +126,11 @@ body, html {
     transform: scale(1.05); 
 }
 
-footer {
-    height: 35px; 
+.rodape {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #0b0b0b;
 }
 
 @media (max-width: 768px) {
@@ -338,7 +367,8 @@ footer {
 .modelos {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 140px 20px 60px 20px; 
+    /* Aumentamos o último valor (bottom) para 120px para proteger o conteúdo */
+    padding: 140px 20px 120px 20px; 
     font-family: 'Inter', sans-serif;
     color: #d3cccc;
 }
@@ -573,7 +603,8 @@ footer {
 .lendas {
     max-width: 1200px;
     margin: auto;
-    padding: 140px 20px 60px;
+    /* Adicionamos padding-bottom de 120px aqui também */
+    padding: 140px 20px 120px; 
 }
 
 .introducao-lendas {
