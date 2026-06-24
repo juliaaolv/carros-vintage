@@ -715,3 +715,26 @@ footer {
 .linha-lenda:nth-child(even) {
     flex-direction: row-reverse;
 }
+
+@media (max-width: 850px) {
+    .linha-lenda, .linha-lenda:nth-child(even) {
+        flex-direction: column; 
+        gap: 0;
+    }
+    
+    .lenda-media, .lenda-info {
+        width: 100%;
+    }
+    
+    .lenda-media img {
+        height: 240px; 
+    }
+    
+    .lenda-info {
+        padding: 20px;
+    }
+    
+    .lenda-info h2 {
+        font-size: 1.4rem;
+    }
+}
