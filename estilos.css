@@ -33,15 +33,12 @@ footer {
     z-index: 10; 
 }
 
-@keyframes entrar {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(180);
-    }
+footer p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
+
 
 /*CSS da pagina inicial*/
 .capa {
@@ -125,12 +122,7 @@ footer {
     transform: scale(1.05); 
 }
 
-footer {
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-    background-color: #0b0b0b;
-}
+
 
 @media (max-width: 768px) {
     .titulo-principal {
