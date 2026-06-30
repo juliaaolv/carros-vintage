@@ -45,7 +45,7 @@ footer {
 
 /*CSS da pagina inicial*/
 .capa {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/ford-maverick-gt.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('imagens/OcMdzi.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,11 +80,13 @@ footer {
 }
 
 .conteudo-principal {
-    max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;     
+    padding: 0 20px;
+    margin: auto 0;         
 }
 .titulo-principal {
     font-family: 'Orbitron', sans-serif;
@@ -281,7 +283,7 @@ footer {
 .menu-principal {
   position:relative;
   top:0;
-  left: 10;
+  left: 10px;
   width: 100%; 
   background-color: rgba(0, 0, 0, 0.8);
   padding: 15px 20px;
@@ -346,7 +348,6 @@ footer {
 .modelos {
     max-width: 1200px;
     margin: 0 auto;
-    /* Aumentamos o último valor (bottom) para 120px para proteger o conteúdo */
     padding: 140px 20px 120px 20px; 
     font-family: 'Inter', sans-serif;
     color: #d3cccc;
@@ -376,7 +377,7 @@ footer {
     line-height: 1.6;
 }
 
-/*Critério: Flexbox/Grid + Responsividade  */
+/*Critério: Flexbox/Grid */
 .cards-modelos {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -541,7 +542,14 @@ footer {
     line-height: 1.6;
 }
 
-   /*RESPONSIVIDADE DA PÁGINA DE MODELOS*/
+
+/*RESPONSIVIDADE DA PÁGINA DE MODELOS*/
+
+@media (max-width: 1024px) {
+    .cards-modelos {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
 
 @media (max-width: 768px) {
     .modelos {
@@ -563,6 +571,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .cards-modelos {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
     .glossario dl {
         display: block; 
     }
@@ -574,6 +587,11 @@ footer {
     }
     .glossario dd {
         margin-bottom: 15px;
+    }
+
+    .easter-box img {
+        max-width: 100%; 
+        height: auto;
     }
 }
 
